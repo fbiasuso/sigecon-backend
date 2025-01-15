@@ -7,7 +7,8 @@ import dotenv from 'dotenv';
 dotenv.config();
 //import database from './database/database';
 
-//import {routerCustomers} from  './routes/customersRoutes';
+import {routerMain} from  './routes/mainRoutes.js';
+import {routerCustomers} from  './routes/customersRoutes.js';
 
 const app = express();
 
@@ -21,7 +22,8 @@ app.use(cors());
 app.use(express.json());
 
 
-// app.use(routerCustomers);
+app.use(routerCustomers);
+app.use(routerMain);
 
 app.get('/', function(req, res){
     res.send('EXPRESS INSTALADO CORRECTAMENTE');
