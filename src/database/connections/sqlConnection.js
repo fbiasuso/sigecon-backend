@@ -1,1 +1,1 @@
-export const connectSQL =  "";
+export const sqlConnection =  "";
