@@ -3,9 +3,14 @@ import express from 'express';
 import morgan from 'morgan';
 import cors from 'cors';
 import dotenv from 'dotenv';
+import { mongoConnection } from './database/index.js';
+
+
 
 dotenv.config();
 //import database from './database/database';
+mongoConnection();
+
 
 import {routerMain} from  './routes/mainRoutes.js';
 import {routerCustomers} from  './routes/customersRoutes.js';
