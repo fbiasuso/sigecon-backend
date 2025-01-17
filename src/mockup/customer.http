@@ -25,7 +25,13 @@ content-type: application/json
             "department": "sample",
             "state": "sample",
             "zip": "sample"
-        }]
+        }],
+    "services":[{
+        "name": "EDET"
+    },
+    {
+        "name": "Tarjeta Naranja"
+    }]
 }
 
 #####

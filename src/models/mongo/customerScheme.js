@@ -32,6 +32,9 @@ const customerSchema = new mongoose.Schema(
             state: {type: String, trim: true},
             zip: {type: String, trim: true}
         }],
+        services: [{
+            name: {type: String, required: false, trim: true}
+        }],
         isActive: {type: Boolean, default: true}
     },
         {timestamps: true});
