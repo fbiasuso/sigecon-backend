@@ -1,3 +1,3 @@
-import { Customer } from "./customerScheme";
+import {Customer} from "./customerScheme.js";
 
-export  {Customer};
+export {Customer};

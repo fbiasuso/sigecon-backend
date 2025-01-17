@@ -1,9 +1,11 @@
 /* import { Customer } from "../../models/customerSchema.js"; */
-import { Customer } from "../../models/index.js";
+import models from "../../models/index.js";
 import { CustomerRepository } from "../CustomersRepository.js";
-
-export class CustomerMongoRepository extends CustomerRepository{
-    async  create (data) {
+ 
+ const {Customer} = models;
+ 
+ export class CustomerMongoRepository extends CustomerRepository{
+   async  create (data) {
         const customer = new Customer(data);
         
         return await customer.save();
@@ -30,4 +32,4 @@ export class CustomerMongoRepository extends CustomerRepository{
         return await Customer.findByIdAndDelete(id);
     }
 
-}
+} 

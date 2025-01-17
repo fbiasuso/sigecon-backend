@@ -1,17 +1,17 @@
-import { CustomerMongoRepository } from "./mongo/CustomerMongoRepository";
-import { CustomerSQLRepository } from "./sql/CustomersqlRepository";
+import { CustomerMongoRepository } from "./mongo/CustomerMongoRepository.js";
+import { CustomerSQLRepository } from "./sql/CustomerSQLRepository.js";
 
 const databaseType = process.env.DB_TYPE || 'mongo';
 
-export let CustomerRepository;
+export let customerRepository;
 
 if (databaseType === 'mongo') {
     
-    CustomerRepository = new CustomerMongoRepository();
+    customerRepository = new CustomerMongoRepository();
     
 } else if (databaseType === 'sql'){
     
-    CustomerRepository = new CustomerSQLRepository();
+    customerRepository = new CustomerSQLRepository();
 
 } else {
 

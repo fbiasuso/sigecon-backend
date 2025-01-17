@@ -1,0 +1,46 @@
+POST http://localhost:3000/customers HTTP/1.1
+content-type: application/json
+
+{   
+    "name": "Lucas Maximiliano PRode",
+    "cuit": "3045789465",
+    "password": "quiente2024",
+    "legal_status":"fisica",
+    "legal_rol": "apoderado",
+    "representative":{
+            "name": "Cooperativa de Salamanca",
+            "cuit": "20458798765",
+            "legal_status":"juridica"
+        },
+    "address": [{
+            "street": "Falsa 1234",
+            "city": "Alberdi",
+            "department": "Alberdi",
+            "state": "Tucuman",
+            "zip": "4158"
+        },
+        {
+            "street": "sample",
+            "city": "sample",
+            "department": "sample",
+            "state": "sample",
+            "zip": "sample"
+        }]
+}
+
+#####
+
+GET http://localhost:3000/customers HTTP/1.1
+
+####
+
+POST http://localhost:3000/customers HTTP/1.1
+content-type: application/json
+
+{
+    "name": "sample",
+    "cuit": "sample",
+    
+}
+
+#####
